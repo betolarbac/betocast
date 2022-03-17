@@ -4,13 +4,17 @@ type Episode = {
     title: string;
     members: string;
     thumbnail: string;
-    duration: string;
+    duration: number;
     url: string;
 }
 
 type PlayerContextData = {
     episodeList: Episode[];
-    currentEpisode: number;
+    currentEpisodeIndex: number;
+    isPlaying: boolean;
+    play: (episode: Episode) => void;
+    togglePlay: () => void;
+
 }
 
-export const PlayerContext = createContext('');
+export const PlayerContext = createContext({} as PlayerContextData);
