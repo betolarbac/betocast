@@ -9,7 +9,7 @@ import { PlayerContext } from '../../contexts/PlayerContext';
 
 
 import styles from './styles.module.scss';
-
+//player 
 export function Player() {
     const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -58,6 +58,7 @@ export function Player() {
             <strong>Selecione uma mídia para ouvir</strong>
             </div>
            )}
+           
 
             <footer className={!episode ? styles.empty : ''}>
                 <div className={styles.progress}>
